@@ -1,0 +1,26 @@
+<html>
+     <head>
+	     <title>标签属性</title>
+	 </head>
+	 <!--标签属性-->
+	 <body>
+	     <h1>我<font color='red' size='3'>喜欢</font>你</h1>
+		 <h2>我<font color='blue' size='6'>讨厌</font>你</h2>
+	 </body>
+	 <script>
+		var preorderTraversal = function (root) {
+		if(!root) return [];
+		let res = []
+		let tree = [root]
+		while (tree.length > 0) {
+			let node = tree.pop()
+			res.push(node.val)
+			if (node.right) tree.push(node.right) // 右子树先进
+			if (node.left) tree.push(node.left)
+		}
+		return res;
+		console.log(res);
+  		};
+		
+	 </script>
+</html>
